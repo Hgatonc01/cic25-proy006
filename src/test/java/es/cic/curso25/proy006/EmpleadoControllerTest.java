@@ -8,6 +8,9 @@ import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 
+import es.cic.curso25.proy006.controller.EmpleadoController;
+import es.cic.curso25.proy006.model.Empleado;
+
 @SpringBootTest
 public class EmpleadoControllerTest {
     

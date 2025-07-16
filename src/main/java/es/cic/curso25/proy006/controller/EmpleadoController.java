@@ -1,4 +1,4 @@
-package es.cic.curso25.proy006;
+package es.cic.curso25.proy006.controller;
 
 import java.util.List;
 
@@ -11,6 +11,9 @@ import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
+
+import es.cic.curso25.proy006.model.Empleado;
+import es.cic.curso25.proy006.service.EmpleadoService;
 
 @RestController
 @RequestMapping("/empleado")

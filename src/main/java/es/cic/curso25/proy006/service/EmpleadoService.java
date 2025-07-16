@@ -1,9 +1,11 @@
-package es.cic.curso25.proy006;
+package es.cic.curso25.proy006.service;
 
 import java.util.ArrayList;
 import java.util.List;
 
 import org.springframework.stereotype.Service;
+
+import es.cic.curso25.proy006.model.Empleado;
 
 @Service
 public class EmpleadoService {
