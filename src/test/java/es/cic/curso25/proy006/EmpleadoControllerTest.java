@@ -37,7 +37,7 @@ public class EmpleadoControllerTest {
         List<Empleado> resultado = empleadoController.getLista();
 
         int contador = resultado.size();
-        assertTrue(contador > 0);
+        assertTrue(contador > 1);
     }
 
     @Test
