@@ -11,7 +11,7 @@ public class MotorException extends RuntimeException {
     }
     
     public MotorException(String message, Throwable throwable) {
-        super(message);
+        super(message, throwable);
         
     }
 }
