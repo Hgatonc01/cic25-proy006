@@ -1,5 +1,8 @@
 package es.cic.curso25.proy006.controller;
 
+
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -12,13 +15,21 @@ import es.cic.curso25.proy006.service.MotorService;
 @RequestMapping("/motor")
 public class MotorController {
 
+    private static final Logger LOGGER = LoggerFactory.getLogger(MotorController.class);
+
     @Autowired
     private MotorService motorService;
 
     @PostMapping
     public long create(Motor motor) {
-        if (motor.getId() != null) {
-            throw new RuntimeException("Al crear no me puedes pasar id");
+        try {
+            if (motor.getId() != null) {
+                throw new RuntimeException("Al crear no me puedes pasar id");
+            }
+        } catch (RuntimeException re) {
+            // LOGGER.error(re.getMessage());
+            // re.printStackTrace();
+            throw new MotorException("Ha fallado el motor al crear", re);
         }
         return motorService.create(motor);
     }
